@@ -317,8 +317,8 @@ h3 {
   .hero-top { 
     flex-direction: column; 
     align-items: flex-start; 
-    h1 { font-size: 30px; }
   }
+  .hero-top h1 { font-size: 30px; }  /* ← ОТДЕЛЬНО! */
   .search { width: 100%; margin-top: 15px; }
   .search input { width: 100%; }
   .cards { grid-template-columns: 1fr; }
@@ -332,13 +332,22 @@ h3 {
   .search input { padding: 12px 15px; font-size: 16px; }
   .burger span { width: 20px; height: 2px; }
 }
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  .hero-top { padding: 20px 10px; gap: 20px; }
+  button { 
+    width: 100%; 
+    max-width: 280px; 
+    margin: 0 auto; 
+    display: block; 
+  }
+}
 
 @media (max-width: 360px) {
   .header-inner { padding: 8px 12px; }
   .hero-top h1 { font-size: 20px; }
   .cards { padding: 0 5px; }
 }
-
 
 </style>
 </head>
