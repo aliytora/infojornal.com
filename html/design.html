@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="../img/logo 1.svg" type="image/x-icon">
+<title>Статьи по теме Дизайн — Info.Jurnal</title>
+<meta name="description" content="Статьи о дизайне от команды InfoJurnal. UX/UI, типографика, шрифты, дизайн-мышление.">
+<meta name="keywords" content="ux ui типографика веб-дизайн шрифты">
+
+<style>
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../font/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../font/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Geologica_Cursive-Light';
+    src: url('../font/Geologica_Cursive-Light.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Geologica_Cursive-Light;
+  background: #fafafa;
+  color: #111;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 10px; 
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1000px; 
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.55); 
+  backdrop-filter: blur(6px);
+  border-radius: 50px; 
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 10px rgba(168, 168, 168, 0.3);
+}
+
+.logo a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ff3b30;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-family: Geologica_Cursive-Light;
+  font-weight: 500;
+  font-size: 16px;
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff3b30;
+  color: #fff;
+  transform: scale(1.05);
+}
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Montserrat-Medium;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Montserrat-Regular;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-top h1 {
+  font-size: 42px;
+}
+
+.search input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 260px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #444;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.read-more {
+  margin-top: auto;
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  padding: 60px 20px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: footerFade 0.8s ease forwards;
+}
+
+@keyframes footerFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #ff3b30;
+}
+
+.footer-column p {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.footer-column a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  transition: color .2s, transform .2s;
+}
+
+.footer-column a:hover {
+  color: #1a73e8;
+  transform: translateX(4px);
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.burger span {
+  width: 26px;
+  height: 3px;
+  background: #111;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  z-index: 999;
+}
+
+.mobile-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 1023px) {
+  .header-inner {
+    padding: 12px 24px;
+  }
+
+  .hero-top h1 {
+    font-size: 36px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  nav.desktop-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-top h1 {
+    font-size: 30px;
+  }
+
+  .hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <a href="../index.html">Info.Jurnal</a>
+    </div>
+
+    <nav class="desktop-nav">
+      <a href="../html/programm.html">Программирование</a>
+      <a href="../html/design.html"><strong>Дизайн</strong></a>
+      <a href="../html/marketing.html">Маркетинг</a>
+      <a href="../html/analitika.html">Аналитика</a>
+    </nav>
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../html/programm.html">Программирование</a>
+      <a href="../html/design.html"><strong>Дизайн</strong></a>
+      <a href="../html/marketing.html">Маркетинг</a>
+      <a href="../html/analitika.html">Аналитика</a>
+</div>
+
+<main class="wrap">
+<section class="hero">
+  <div class="hero-top">
+    <h1>Дизайн</h1>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Что ищете?">
+    </div>
+  </div>
+  <p>Статьи о дизайне: чем отличаются графические и коммуникационные дизайнеры от дизайнеров интерфейсов, что такое UX и UI, где лучше создавать макеты и другие полезные советы. Истории выпускников о том, как они делали первые проекты, собирали портфолио и искали работу. Материалы о том, как мы учим создавать изображения и интерфейсы.</p>
+</section>
+
+<section class="cards" id="cards">
+  <a href="../html/d1.html" class="card" data-title="минимализм">
+    <img src="../img/d1.webp" alt="Минимализма в веб-дизайне" title="Правила использования и внедрения минимализма на свой веб-сайт">
+    <h3>Минимализм в веб-дизайне</h3>
+    <span class="read-more">Читать статью</span>
+  </a>
+
+  <a href="../html/d2.html" class="card" data-title="типографика">
+    <img src="../img/d2.webp" alt="Типографика в дизайне" title="Правильный подбор соответствующего шрифта">
+    <h3>Типографика в дизайне</h3>
+    <span class="read-more">Читать статью</span>
+  </a>
+
+  <a href="../html/d3.html" class="card" data-title="шрифты">
+    <img src="../img/d3.webp" alt="Видф шрифтов" title="Разбор особенностей каждого шрифта">
+    <h3>Виды шрифтов</h3>
+    <span class="read-more">Читать статью</span>
+  </a>
+
+  <a href="../html/d4.html" class="card" data-title="дизайн мышление">
+    <img src="../img/d4.webp" alt="Дизайн-мышление" title="Как развить насмотренность и создавать что-то новое">
+    <h3>Дизайн-мышление</h3>
+    <span class="read-more">Читать статью</span>
+  </a>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3>Контакты</h3>
+      <p>Email: infojurnal@mail.ru</p>
+      <p>Телефон: +7 (123) 456-78-90</p>
+      <p>Ижевск, Ленина 68</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Социальные сети</h3>
+      <a href="https://en.wikipedia.org/wiki/Instagram" target="_blank" rel="nofolow">Instagram</a>
+      <a href="https://vk.com/club234506227" target="_blank" rel="nofolow">VK</a>
+      <a href="https://t.me/+WRZYM-jxZdI1NjEy" target="_blank">Telegram</a>
+    </div>
+
+
+  </div>
+  <div class="footer-bottom">
+    © 2025 Info.Jurnal
+  </div>
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+  cards.forEach(card => {
+    const text = card.dataset.title + card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "flex" : "none";
+  });
+});
+</script>
+
+
+<script>
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+burger.addEventListener('click', () => {
+  mobileMenu.style.display =
+    mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+});
+</script>
+
+</body>
+</html>

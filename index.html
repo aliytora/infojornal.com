@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="../seo/img/logo 1.svg" type="image/x-icon">
+  <title>Блог Info.Jurnal</title>
+  <meta name="description" content="Статьи о направлениях цифрового мира. Поможем понять, как всё устроено и в какую сторону развиваться." />
+  <meta name="keywords" content="программирование маркетинг аналитика дизайн">
+
+  <style>
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./font/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('./font/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('./font/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Geologica_Cursive-Light';
+    src: url('./font/Geologica_Cursive-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Arteks Contour';
+    src: url('./font/Arteks\ Contour.otf');
+}
+
+:root {
+  --accent: #ff3b30;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Geologica_Cursive-Light;
+  background: #fafafa;
+  color: #111;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: Montserrat-Bold;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: Montserrat-Medium;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Montserrat-Regular;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-family: Geologica_Cursive-Light;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: Montserrat-Bold;
+}
+
+header {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-top: 15px;
+}
+
+.header-inner {
+  max-width: 1000px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 10px rgba(168, 168, 168, 0.3);
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--accent);
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+.wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+.hero-screen {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #fafafa 0%, #c8eafb 50%, #fafafa 100%);
+  padding: 80px 0 60px;
+  border-radius: 0 0 40px 40px;
+  margin-top: 0;
+}
+
+.hero-sc {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(178deg, #fafafa 0%, #d2eaf6 50%, #fafafa 100%);
+  padding: 80px 0 60px;
+  border-radius: 0 0 40px 40px;
+  margin-top: 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.hero-button:hover {
+  background: #e23627;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-item h3 {
+  margin: 0;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.faq-item h3:hover {
+  background: #f0f0f0;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  color: #666;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg); 
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; 
+  padding: 1.5rem;
+
+}
+
+.faq-icon::after {
+  content: '▼'; 
+  font-size: 1.2rem;
+  color: #666;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.faq-item.active .faq-icon::after {
+  transform: rotate(180deg); 
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  margin: 0;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .wrap {
+    padding: 0 16px;
+    margin: 20px auto;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1100px;
+  width: 100%;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 4px 10px rgba(168,168,168,0.3);
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--accent);
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.wrap {
+  margin: 32px auto;
+  padding: 0 20px;
+  max-width: 1100px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.hero-button {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.hero-button:hover {
+  background: #e23627;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.stats {
+  background: #f9fafb;
+  padding: 20px 20px;
+}
+
+.stats-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.stat-item {
+  flex: 1 1 150px;
+  min-width: 120px;
+}
+
+.stat-number {
+  font-family: Arteks Contour;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 25px;
+  color: #555;
+}
+
+@media(max-width:768px){
+  .stats-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+  .about-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 470px 1fr;
+    column-gap: 80px;
+    row-gap: 30px;
+    align-items: start;
+  }
+
+  .about-image img {
+    width: 90%;
+    height: 230px;
+    border-radius: 10px;
+    display: block;
+  }
+
+.about-block h2 {
+  text-align: center; 
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 60px;
+  padding-bottom: 20px;
+ 
+}
+
+  .feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #333;
+    padding-left: 30px;
+  }
+
+  .feature-title:hover {
+    color: #9f9f9f;
+  }
+
+  .feature-description {
+    font-size: 18px;
+    color: #5a5959;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ff501f;
+  }
+
+.values {
+  padding: 64px 20px;
+  background: #f9fafb;
+}
+
+.values h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px 22px 26px;
+  border: 2px solid #f97316;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+.value-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.icon-slot {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+  justify-content: center;
+}
+
+.icon-slot img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trust-project{
+  text-align: center;
+}
+
+.reviews {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(182deg, #fafafa 0%, #d2eaf6 50%, #fafafa 100%);
+  padding: 80px 0 60px;
+  margin-top: 0;
+}
+
+.reviews-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 40px;
+  font-family: Montserrat-Medium;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 26px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.review-avatar {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 14px;
+}
+
+.review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.review-text {
+  margin: 0;
+  font-size: 14px;
+}
+
+.review-card {
+  background: #f0f0f0; 
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;           
+  min-width: 280px;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  background: #ccc; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.review-card p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.hero-button2 {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 58.5%;
+  margin-top: 60px;
+}
+
+.hero-button2:hover {
+  background: #e23627;
+}
+
+.subscribe-screen {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  background: linear-gradient(to top, #D0EFFF 0%, #fafafa 100%);
+  border-radius: 40px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.subscribe-screen h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.subscribe-screen p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.footer {
+  background: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  padding: 60px 20px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: footerFade 0.8s ease forwards;
+}
+
+@keyframes footerFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #ff3b30;
+}
+
+.footer-column p {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.footer-column a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  transition: color .2s, transform .2s;
+}
+
+.footer-column a:hover {
+  color: #1a73e8;
+  transform: translateX(4px);
+}
+
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}
+@media (max-width: 1024px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 24px; }
+  p  { font-size: 17px; }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  nav.desktop-nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .burger span {
+    width: 26px;
+    height: 3px;
+    background: #111;
+    border-radius: 2px;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 999;
+  }
+
+  .mobile-nav a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    text-align: center;
+  }
+
+  .hero-button,
+  .hero-button2 {
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo"><a href="j:\seo\index.html">Info.Jurnal</a></div>
+    <nav class="desktop-nav">
+      <a href="../seo/html/programm.html">Программирование</a>
+      <a href="../seo/html/design.html">Дизайн</a>
+      <a href="../seo/html/marketing.html">Маркетинг</a>
+      <a href="../seo/html/analitika.html">Аналитика</a>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+    <nav class="mobile-nav" id="mobileNav" style="display:none;flex-direction:column;gap:12px;padding:12px 20px 16px;background:#fff;">
+      <a href="../seo/html/programm.html">Программирование</a>
+      <a href="../seo/html/design.html">Дизайн</a>
+      <a href="../seo/html/marketing.html">Маркетинг</a>
+      <a href="../seo/html/analitika.html">Аналитика</a>
+    </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero-screen">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Info.Jurnal — сообщество о цифровых профессиях и цифровой среде</h1>
+        <p>Понятные статьи о программировании, дизайне, маркетинге и аналитике. Мы помогаем разобраться, как устроены цифровые профессии, чем они отличаются друг от друга и в каком направлении развиваться.</p>
+        <button class="hero-button"><a href="https://vk.com/club234506227" target="_blank" rel="nofolow">Подписаться на сообщество журнала</a></button>
+      </div>
+      <div class="hero-image">
+        <img src="../seo/img/girrrl.webp" alt="Девушка читает книгу" title="Info.Jurnal главная страница">
+      </div>
+    </div>
+  </section>
+
+
+<section class="stats">
+  <div class="stats-container">
+    <div class="stat-item">
+      <div class="stat-number">150+</div>
+      <div class="stat-label">Статей</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">99%</div>
+      <div class="stat-label">Положительных откликов</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">10 000+</div>
+      <div class="stat-label">Читателей</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero-sc">
+<div class="about-image">
+  <div class="about-block">
+    <h2>Мы помогаем разбираться в цифровом мире, <br>показываем работу на практике,<br> направляя к профессиональному развитию.</h2>
+  </div>
+<div class="about-grid">  
+ 
+<div class="feature-title">Объясняем сложные вещи простым языком</div>
+  <div class="feature-description">Даже самые запутанные концепции программирования, дизайна, маркетинга и аналитики становятся понятными.</div>
+
+<div class="feature-title">Разбираем цифровые профессии без прикрас</div>
+  <div class="feature-description">Показываем реальную работу специалистов и требования к каждой роли.</div>
+
+<div class="feature-title">Показываем логику инструментов и процессов</div>
+  <div class="feature-description">Объясняем, как устроены инструменты и процессы, чтобы вы понимали не только «что», но и «почему».</div>
+
+<div class="feature-title">Помогаем сформировать общее понимание сферы</div>
+  <div class="feature-description">Вы получаете целостную картину цифровой индустрии и видите, куда двигаться дальше.</div>
+</div>
+ <button class="hero-button2"><a href="https://vk.com/club234506227" target="_blank" rel="nofolow">Подписаться на сообщество</a></button>
+</section>
+
+
+<section class="values">
+  <h2>Наши ценности</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="icon-slot"><img src="../seo/img/Chestnost.svg" alt="Иконка Честность"></div>
+      <h3>Честность</h3>
+      <p>Рассказываем о цифровых профессиях, опираясь на открытые источники, опыт специалистов и реальные кейсы.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon-slot"><img src="../seo/img/Uvazhenie.svg" alt="Уважение"></div>
+      <h3>Уважение</h3>
+      <p>Помогаем разбираться без давления — человек сам выбирает направление и комфортную скорость.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon-slot"><img src="../seo/img/Ponatnost.svg" alt="Понятность"></div>
+      <h3>Понятность</h3>
+      <p>Структурируем информацию так, чтобы она помогала принимать взвешенные решения.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon-slot"><img src="../seo/img/Podderzhka.svg" alt="Поддержка"></div>
+      <h3>Поддержка</h3>
+      <p>Даём опору для профессионального роста и понимание профессий и процессов.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="trust-project">
+  <h2>Проект, которому можно доверять</h2>
+  <p>Info.Jurnal развивается как независимый информационный проект. Мы ориентируемся на<br> открытые источники, опыт специалистов и реальные кейсы из цифровой среды.</p>
+  <p>Наши материалы читают люди, интересующиеся IT, дизайном, маркетингом и аналитикой,<br> а сам журнал формируется как аккуратная и понятная точка входа в тему.</p>
+</section>
+
+<section class="reviews">
+  <div class="reviews-inner">
+    <h2 class="reviews-title">Отзывы пользователей</h2>
+
+    <div class="reviews-list">
+      <div class="review-card review-card--blue">
+        <div class="review-avatar">
+          <img src="../seo/img/user.svg" alt="Аватар пользователя" title="Отзыв от пользователя">
+        </div>
+        <div class="review-content">
+          <p class="review-name">Светлана Иванова</p>
+          <p class="review-text">Понравилось, что всё по делу. Про SEO семантику прочитала — теперь понимаю, почему у нас трафик не растёт. Спасибо!</p>
+        </div>
+      </div>
+
+      <div class="review-card review-card--yellow">
+        <div class="review-avatar">
+          <img src="../seo/img/user.svg" alt="Аватар пользователя" title="Отзыв от пользователя" >
+        </div>
+        <div class="review-content">
+          <p class="review-name">Михаил Петров</p>
+          <p class="review-text">
+            Читаю про профессии. Фронтенд и UX теперь не путаю. Хочу стать разработчиком, помогает разобраться.
+          </p>
+        </div>
+      </div>
+
+      <div class="review-card review-card--brown">
+        <div class="review-avatar">
+          <img src="../seo/img/user.svg" alt="Аватар пользователя" title="Отзыв от пользователя">
+        </div>
+        <div class="review-content">
+          <p class="review-name">Елена Смирнова</p>
+          <p class="review-text">
+            Беру junior'ам читать про soft skills. Экономит время на онбординге. Материал годный.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="hero-button2"><a href="https://vk.com/club234506227" target="_blank" rel="nofolow">Подписаться на сообщество</a></button>
+</section>
+
+  <section class="faq">
+<h2>FAQ</h2>
+<div class="faq-item"><h3>Для кого предназначен журнал и нужен ли технический бэкграунд? <span class="faq-icon"></span></h3><p class="faq-answer">Журнал подходит всем, кто интересуется программированием, дизайном, маркетингом и аналитикой и хочет понять, как устроены эти профессии изнутри. Тексты пишутся простым языком, поэтому подойдёт и тем, кто только присматривается к цифровой сфере.</p></div>
+<div class="faq-item"><h3>На чём основаны ваши материалы? <span class="faq-icon"></span></h3><p class="faq-answer">Тексты собираются из открытых источников, реального опыта специалистов и практических кейсов. Цель — дать честное и взвешенное представление о профессиях, а не создавать иллюзию лёгкого и быстрого входа в профессию</p></div>
+<div class="faq-item"><h3>Зачем подписываться на сообщество журнала? <span class="faq-icon"></span></h3><p class="faq-answer">Подписка позволяет получать новые материалы без спешки, следить за обновлениями и не пропускать важные разборы. Это удобный способ оставаться в теме цифровых профессий и постепенно формировать целостную картину индустрии.</p></div>
+</section>
+</div>
+
+<section class="subscribe-screen">
+    <h2>Подпишитесь на сообщество Info.Jurnal</h2>
+    <p>Если вам важно разобраться в цифровых профессиях и принимать решения без спешки — подпишитесь на сообщество журнала.</p>
+    <button class="hero-button"><a href="https://vk.com/club234506227" target="_blank" rel="nofolow">Подписаться</a></button>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Контакты</h3>
+      <p>Email: infojurnal@mail.ru</p>
+      <p>Телефон: +7 (123) 456-78-90</p>
+      <p>Ижевск, Ленина 68</p>
+    </div>
+    <div class="footer-column">
+      <h3>Социальные сети</h3>
+      <a href="https://en.wikipedia.org/wiki/Instagram" target="_blank" rel="nofolow">Instagram</a>
+      <a href="https://vk.com/club234506227" target="_blank" rel="nofolow">VK</a>
+      <a href="https://t.me/+WRZYM-jxZdI1NjEy" target="_blank">Telegram</a>
+    </div>
+
+  </div>
+  <div class="footer-bottom">© 2025 Info.Jurnal</div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  burger.addEventListener('click', () => {
+    mobileNav.style.display =
+      mobileNav.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.style.display = 'none';
+    });
+  });
+</script>
+
+<script>
+document.querySelectorAll('.faq-item').forEach((item) => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.faq-item').forEach(el => {
+      if (el !== item) el.classList.remove('active');
+    });
+
+    item.classList.toggle('active');
+  });
+});
+</script>
+</body>
+</html>

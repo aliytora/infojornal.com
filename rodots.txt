@@ -1,0 +1,14 @@
+User-agent: Yandex
+Allow: /
+Clean-Param: variant_id &order &filter &cumulative_discount &site &amp &clear &erid &pid &id &q &_ga &rel / 
+Clean-Param: utm_campaign &utm_content &utm_medium &utm_source &utm_term &yclid /
+Clean-Param: from &showAuthPopup &ref &trk &hybris &module &giftery &vvizitnice-brand-link /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://infojurnal.com/sitemap.xml
+Host: infojurnal.com

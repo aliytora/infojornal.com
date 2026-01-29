@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+        <url>
+            <loc>http://www.infojurnal.com/index.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>1</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/programm.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/p1.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/p2.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/p3.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/p4.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/design.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/d1.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/d2.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/d3.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/d4.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/marketing.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/m1.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+
+        <url>
+            <loc>http://www.infojurnal.com/analitika.html</loc>
+            <lastmod>2005-01-27</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    </urlset>
+
+</sitemapindex>
