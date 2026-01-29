@@ -284,64 +284,65 @@ h3 {
 
 
 @media (max-width: 1023px) {
-  .header-inner {
-    padding: 12px 24px;
-  }
-
-  .hero-top h1 {
-    font-size: 36px;
-  }
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  .header-inner { padding: 12px 24px; }
+  .hero-top h1 { font-size: 36px; }
+  .cards { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
   }
 }
-
-
 @media (max-width: 767px) {
-
-  nav.desktop-nav {
-    display: none;
+  nav.desktop-nav { display: none; }
+  .burger { display: flex; }
+  .hero-top { 
+    flex-direction: column; 
+    align-items: flex-start; 
   }
-
-  .burger {
-    display: flex;
+  .search { 
+    width: 100%; 
+    margin-top: 15px; 
   }
-
-  .hero-top {
-    flex-direction: column;
-    align-items: flex-start;
+  .search input { 
+    width: 100%; 
   }
+  .cards { grid-template-columns: 1fr; }
+  .hero-top h1 { font-size: 30px; }
+}
 
-
-  .search input {
-    width: 100%;
+@media (max-width: 480px) {
+  .header-inner { padding: 10px 15px; }
+  .hero-top { 
+    h1 { 
+      font-size: 24px; 
+      line-height: 1.2; 
+    }
+    p { font-size: 15px; }
   }
-
-
-  .cards {
-    grid-template-columns: 1fr;
+  .cards { 
+    gap: 15px; 
+    padding: 0 10px; 
   }
-
-  .hero-top h1 {
-    font-size: 30px;
+  .search input { 
+    padding: 12px 15px; 
+    font-size: 16px; /* Без зума */
   }
-
-  .hero-top {
-    flex-direction: column;
-    align-items: flex-start;
+  .burger { 
+    gap: 4px; 
   }
-
-  .search {
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  .search input {
-    width: 100%;
+  .burger span { 
+    width: 20px; 
+    height: 2px; 
   }
 }
+
+@media (max-width: 360px) {
+  .header-inner { padding: 8px 12px; }
+  .hero-top h1 { font-size: 20px; }
+  .cards { padding: 0 5px; }
+}
+
+
+
 </style>
 </head>
 
